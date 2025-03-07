@@ -1,52 +1,101 @@
-'use client';
-
-import Header from '@/components/Header';
-import ActionButton from '@/components/ActionButton';
+import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black pb-28 relative">
-      <Header />
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+        <Image
+          className="dark:invert"
+          src="/next.svg"
+          alt="Next.js logo"
+          width={180}
+          height={38}
+          priority
+        />
+        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+          <li className="mb-2">
+            Get started by editing{" "}
+            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
+              src/app/page.tsx
+            </code>
+            .
+          </li>
+          <li>Save and see your changes instantly.</li>
+        </ol>
 
-      <div className="mx-4 mt-10">
-        <div className="bg-[#1E1E1E] hover:bg-[#252525] rounded-2xl p-5 flex items-center justify-between transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
-          <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-[#252525] hover:bg-[#2a2a2a] rounded-full flex items-center justify-center transition-all duration-300">
-              <span className="text-yellow-400 text-2xl animate-pulse">⚡</span>
-            </div>
-            <div>
-              <h3 className="text-white font-medium text-lg hover:text-[#2E9BFA] transition-colors duration-300">3-days день чек-ина</h3>
-              <p className="text-gray-400 text-sm mt-1">Следующий клейм через 14h 12m</p>
-            </div>
-          </div>
-          <div className="w-8 h-8 bg-[#252525] hover:bg-[#2a2a2a] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
-            <span className="text-green-400 text-lg">✓</span>
-          </div>
+        <div className="flex gap-4 items-center flex-col sm:flex-row">
+          <a
+            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className="dark:invert"
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Read our docs
+          </a>
         </div>
-      </div>
-
-      <div className="flex justify-center gap-8 mt-8">
-        <ActionButton icon="🌱" label="Запустить токен" />
-        <ActionButton icon="🚀" label="Memepad" />
-        <ActionButton icon="🔥" label="Трейдинг-бот" />
-      </div>
-
-      <div className="mx-4 mt-4">
-        <div className="bg-[#1E1E1E] hover:bg-[#252525] rounded-2xl p-5 transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
-          <div className="flex justify-between items-start">
-            <div>
-              <h2 className="text-white text-xl font-semibold hover:text-[#2E9BFA] transition-colors duration-300">Второй сезон уже тут</h2>
-              <p className="text-gray-400 mt-2 text-sm">Трейди или запускай свой токен,<br />чтобы получить Meme поинты</p>
-              <button className="mt-4 bg-[#252525] hover:bg-[#2a2a2a] text-white px-5 py-2.5 rounded-xl font-medium transition-all duration-300 hover:scale-105 active:scale-95">
-                Как это работает
-              </button>
-            </div>
-            <div className="w-16 h-16 bg-[#252525] hover:bg-[#2a2a2a] rounded-full flex items-center justify-center transition-all duration-300 hover:rotate-12">
-              <span className="text-2xl">🎯</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
+      </main>
+      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          Learn
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
+          Examples
+        </a>
+        <a
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Go to nextjs.org →
+        </a>
+      </footer>
+    </div>
   );
 }
