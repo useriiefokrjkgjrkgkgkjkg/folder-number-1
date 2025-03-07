@@ -8,7 +8,7 @@ export default function Home() {
     <main className="min-h-screen bg-black pb-20">
       <Header />
       
-      <div className="flex justify-around px-12 mt-12 mb-12">
+      <div className="flex justify-around px-8 mt-10">
         <ActionButton icon="🌱" label="My Gifts" />
         <ActionButton icon="🚀" label="Market" />
         <ActionButton icon="🔥" label="Actions" />
