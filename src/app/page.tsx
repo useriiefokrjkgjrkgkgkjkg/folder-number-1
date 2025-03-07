@@ -1,6 +1,7 @@
 'use client';
 
 import Header from '@/components/Header';
+import ActionButton from '@/components/ActionButton';
 
 export default function Home() {
   return (
@@ -22,6 +23,12 @@ export default function Home() {
             <span className="text-green-400 text-lg">✓</span>
           </div>
         </div>
+      </div>
+
+      <div className="flex justify-center gap-8 mt-8">
+        <ActionButton icon="🌱" label="Запустить токен" />
+        <ActionButton icon="🚀" label="Memepad" />
+        <ActionButton icon="🔥" label="Трейдинг-бот" />
       </div>
 
       <div className="mx-4 mt-4">
