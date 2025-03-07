@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { GiftIcon, ClockIcon, ChartBarIcon } from '@heroicons/react/24/outline';
 
 const Navigation = () => {
   const [activeTab, setActiveTab] = useState('main');
@@ -12,31 +13,36 @@ const Navigation = () => {
       id: 'main',
       name: 'Main',
       icon: 'https://i.imgur.com/G6aMUah.png',
-      href: '/'
+      href: '/',
+      isImage: true
     },
     {
       id: 'market',
       name: 'Market',
       icon: 'https://i.imgur.com/QmVe8A9.png',
-      href: '/market'
+      href: '/market',
+      isImage: true
     },
     {
       id: 'gifts',
       name: 'My Gifts',
-      icon: 'https://i.imgur.com/G6aMUah.png',
-      href: '/gifts'
+      icon: GiftIcon,
+      href: '/gifts',
+      isImage: false
     },
     {
       id: 'auctions',
       name: 'Auctions',
-      icon: 'https://i.imgur.com/QmVe8A9.png',
-      href: '/auctions'
+      icon: ClockIcon,
+      href: '/auctions',
+      isImage: false
     },
     {
       id: 'activity',
       name: 'Activity',
-      icon: 'https://i.imgur.com/G6aMUah.png',
-      href: '/activity'
+      icon: ChartBarIcon,
+      href: '/activity',
+      isImage: false
     }
   ];
 
@@ -54,15 +60,23 @@ const Navigation = () => {
               onClick={() => setActiveTab(tab.id)}
             >
               <div className="relative w-6 h-6 mb-1">
-                <Image
-                  src={tab.icon}
-                  alt={tab.name}
-                  width={24}
-                  height={24}
-                  className={`w-full h-full object-contain ${
-                    activeTab === tab.id ? 'opacity-100' : 'opacity-50'
-                  }`}
-                />
+                {tab.isImage ? (
+                  <Image
+                    src={tab.icon as string}
+                    alt={tab.name}
+                    width={24}
+                    height={24}
+                    className={`w-full h-full object-contain ${
+                      activeTab === tab.id ? 'opacity-100' : 'opacity-50'
+                    }`}
+                  />
+                ) : (
+                  <tab.icon
+                    className={`w-6 h-6 ${
+                      activeTab === tab.id ? 'opacity-100' : 'opacity-50'
+                    }`}
+                  />
+                )}
               </div>
               <span className="text-xs">{tab.name}</span>
             </Link>
