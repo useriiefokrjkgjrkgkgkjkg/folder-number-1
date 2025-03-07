@@ -11,7 +11,7 @@ export default function Home() {
       <div className="flex justify-around px-8 mt-10">
         <ActionButton icon="🌱" label="Запустить токен" />
         <ActionButton icon="🔥" label="Memepad" />
-        <ActionButton icon="🤖" label="Трейдинг-бот" />
+        <ActionButton icon="🚀" label="Трейдинг-бот" />
       </div>
 
       <div className="mx-4 mt-10">
