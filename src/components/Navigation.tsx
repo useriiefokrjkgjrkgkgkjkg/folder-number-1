@@ -11,31 +11,31 @@ const Navigation = () => {
     {
       id: 'main',
       name: 'Main',
-      icon: '/icons/main.svg',
+      icon: 'https://i.imgur.com/G6aMUah.png',
       href: '/'
     },
     {
       id: 'market',
       name: 'Market',
-      icon: '/icons/market.svg',
+      icon: 'https://i.imgur.com/QmVe8A9.png',
       href: '/market'
     },
     {
       id: 'gifts',
       name: 'My Gifts',
-      icon: '/icons/gifts.svg',
+      icon: 'https://i.imgur.com/G6aMUah.png',
       href: '/gifts'
     },
     {
       id: 'auctions',
       name: 'Auctions',
-      icon: '/icons/auctions.svg',
+      icon: 'https://i.imgur.com/QmVe8A9.png',
       href: '/auctions'
     },
     {
       id: 'activity',
       name: 'Activity',
-      icon: '/icons/activity.svg',
+      icon: 'https://i.imgur.com/G6aMUah.png',
       href: '/activity'
     }
   ];
@@ -57,8 +57,11 @@ const Navigation = () => {
                 <Image
                   src={tab.icon}
                   alt={tab.name}
-                  fill
-                  className={activeTab === tab.id ? 'opacity-100' : 'opacity-50'}
+                  width={24}
+                  height={24}
+                  className={`w-full h-full object-contain ${
+                    activeTab === tab.id ? 'opacity-100' : 'opacity-50'
+                  }`}
                 />
               </div>
               <span className="text-xs">{tab.name}</span>
