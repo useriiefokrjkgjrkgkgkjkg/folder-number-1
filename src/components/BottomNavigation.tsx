@@ -4,45 +4,45 @@ import Image from 'next/image';
 
 export default function BottomNavigation() {
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-[#1E1E1E] py-5 px-6">
-      <div className="flex justify-between items-center max-w-md mx-auto">
-        <div className="flex flex-col items-center">
+    <div className="fixed bottom-0 left-0 right-0 bg-[#1E1E1E] py-6 px-8">
+      <div className="flex justify-between items-center max-w-2xl mx-auto">
+        <div className="flex flex-col items-center group cursor-pointer">
           <Image 
             src="https://i.imgur.com/G6aMUah.png" 
             alt="Main" 
-            width={28} 
-            height={28} 
-            className="mb-1.5"
+            width={40} 
+            height={40} 
+            className="mb-2 transition-transform duration-300 group-hover:scale-110"
           />
-          <span className="text-white text-sm">Main</span>
+          <span className="text-white text-base">Main</span>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center group cursor-pointer">
           <Image 
             src="https://i.imgur.com/QmVe8A9.png" 
             alt="Market" 
-            width={28} 
-            height={28} 
-            className="mb-1.5"
+            width={40} 
+            height={40} 
+            className="mb-2 transition-transform duration-300 group-hover:scale-110"
           />
-          <span className="text-gray-400 text-sm">Market</span>
+          <span className="text-gray-400 text-base">Market</span>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="w-7 h-7 mb-1.5 flex items-center justify-center">
-            <span className="text-2xl text-gray-400">🎁</span>
+        <div className="flex flex-col items-center group cursor-pointer">
+          <div className="w-10 h-10 mb-2 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <span className="text-3xl text-gray-400">🎁</span>
           </div>
-          <span className="text-gray-400 text-sm">My Gifts</span>
+          <span className="text-gray-400 text-base">My Gifts</span>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="w-7 h-7 mb-1.5 flex items-center justify-center">
-            <span className="text-2xl text-gray-400">⏰</span>
+        <div className="flex flex-col items-center group cursor-pointer">
+          <div className="w-10 h-10 mb-2 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <span className="text-3xl text-gray-400">⏰</span>
           </div>
-          <span className="text-gray-400 text-sm">Auctions</span>
+          <span className="text-gray-400 text-base">Auctions</span>
         </div>
-        <div className="flex flex-col items-center">
-          <div className="w-7 h-7 mb-1.5 flex items-center justify-center">
-            <span className="text-2xl text-gray-400">📊</span>
+        <div className="flex flex-col items-center group cursor-pointer">
+          <div className="w-10 h-10 mb-2 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+            <span className="text-3xl text-gray-400">📊</span>
           </div>
-          <span className="text-gray-400 text-sm">Activity</span>
+          <span className="text-gray-400 text-base">Activity</span>
         </div>
       </div>
     </div>

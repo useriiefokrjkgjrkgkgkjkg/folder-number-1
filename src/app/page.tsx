@@ -2,6 +2,7 @@
 
 import Header from '@/components/Header';
 import ActionButton from '@/components/ActionButton';
+import BottomNavigation from '@/components/BottomNavigation';
 
 export default function Home() {
   return (
@@ -47,6 +48,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+
+      <BottomNavigation />
     </main>
   );
 }
