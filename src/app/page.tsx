@@ -1,48 +1,41 @@
 'use client';
 
 import Header from '@/components/Header';
-import ActionButton from '@/components/ActionButton';
 import Image from 'next/image';
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-black pb-28 relative">
       <Header />
-      
-      <div className="flex justify-around px-8 mt-10">
-        <ActionButton icon="🌱" label="My Gifts" />
-        <ActionButton icon="🚀" label="Market" />
-        <ActionButton icon="🔥" label="Actions" />
-      </div>
 
       <div className="mx-4 mt-10">
-        <div className="bg-[#1E1E1E] rounded-2xl p-5 flex items-center justify-between">
+        <div className="bg-[#1E1E1E] hover:bg-[#252525] rounded-2xl p-5 flex items-center justify-between transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-[#252525] rounded-full flex items-center justify-center">
-              <span className="text-yellow-400 text-2xl">⚡</span>
+            <div className="w-12 h-12 bg-[#252525] hover:bg-[#2a2a2a] rounded-full flex items-center justify-center transition-all duration-300">
+              <span className="text-yellow-400 text-2xl animate-pulse">⚡</span>
             </div>
             <div>
-              <h3 className="text-white font-medium text-lg">3-days день чек-ина</h3>
+              <h3 className="text-white font-medium text-lg hover:text-[#2E9BFA] transition-colors duration-300">3-days день чек-ина</h3>
               <p className="text-gray-400 text-sm mt-1">Следующий клейм через 14h 12m</p>
             </div>
           </div>
-          <div className="w-8 h-8 bg-[#252525] rounded-full flex items-center justify-center">
+          <div className="w-8 h-8 bg-[#252525] hover:bg-[#2a2a2a] rounded-full flex items-center justify-center transition-all duration-300 hover:scale-110">
             <span className="text-green-400 text-lg">✓</span>
           </div>
         </div>
       </div>
 
       <div className="mx-4 mt-4">
-        <div className="bg-[#1E1E1E] rounded-2xl p-5">
+        <div className="bg-[#1E1E1E] hover:bg-[#252525] rounded-2xl p-5 transition-all duration-300 ease-in-out transform hover:scale-[1.02]">
           <div className="flex justify-between items-start">
             <div>
-              <h2 className="text-white text-xl font-semibold">Второй сезон уже тут</h2>
+              <h2 className="text-white text-xl font-semibold hover:text-[#2E9BFA] transition-colors duration-300">Второй сезон уже тут</h2>
               <p className="text-gray-400 mt-2 text-sm">Трейди или запускай свой токен,<br />чтобы получить Meme поинты</p>
-              <button className="mt-4 bg-[#252525] hover:bg-[#2a2a2a] text-white px-5 py-2.5 rounded-xl font-medium transition-colors">
+              <button className="mt-4 bg-[#252525] hover:bg-[#2a2a2a] text-white px-5 py-2.5 rounded-xl font-medium transition-all duration-300 hover:scale-105 active:scale-95">
                 Как это работает
               </button>
             </div>
-            <div className="w-16 h-16 bg-[#252525] rounded-full flex items-center justify-center">
+            <div className="w-16 h-16 bg-[#252525] hover:bg-[#2a2a2a] rounded-full flex items-center justify-center transition-all duration-300 hover:rotate-12">
               <span className="text-2xl">🎯</span>
             </div>
           </div>
@@ -50,45 +43,45 @@ export default function Home() {
       </div>
 
       {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 right-0 bg-[#1E1E1E] py-5 px-6">
+      <div className="fixed bottom-0 left-0 right-0 bg-[#1E1E1E] py-5 px-6 transition-transform duration-300 ease-in-out">
         <div className="flex justify-between items-center max-w-md mx-auto">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center group cursor-pointer">
             <Image 
               src="https://i.imgur.com/G6aMUah.png" 
               alt="Main" 
               width={32} 
               height={32} 
-              className="mb-1.5"
+              className="mb-1.5 transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="text-white text-sm">Main</span>
+            <span className="text-white text-sm transition-colors duration-300 group-hover:text-[#2E9BFA]">Main</span>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center group cursor-pointer">
             <Image 
               src="https://i.imgur.com/QmVe8A9.png" 
               alt="Market" 
               width={32} 
               height={32} 
-              className="mb-1.5"
+              className="mb-1.5 transition-transform duration-300 group-hover:scale-110"
             />
-            <span className="text-gray-400 text-sm">Market</span>
+            <span className="text-gray-400 text-sm transition-colors duration-300 group-hover:text-[#2E9BFA]">Market</span>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="w-8 h-8 mb-1.5 flex items-center justify-center">
-              <span className="text-2xl text-gray-400">🎁</span>
+          <div className="flex flex-col items-center group cursor-pointer">
+            <div className="w-8 h-8 mb-1.5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              <span className="text-2xl text-gray-400 transition-colors duration-300 group-hover:text-[#2E9BFA]">🎁</span>
             </div>
-            <span className="text-gray-400 text-sm">My Gifts</span>
+            <span className="text-gray-400 text-sm transition-colors duration-300 group-hover:text-[#2E9BFA]">My Gifts</span>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="w-8 h-8 mb-1.5 flex items-center justify-center">
-              <span className="text-2xl text-gray-400">⏰</span>
+          <div className="flex flex-col items-center group cursor-pointer">
+            <div className="w-8 h-8 mb-1.5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              <span className="text-2xl text-gray-400 transition-colors duration-300 group-hover:text-[#2E9BFA]">⏰</span>
             </div>
-            <span className="text-gray-400 text-sm">Auctions</span>
+            <span className="text-gray-400 text-sm transition-colors duration-300 group-hover:text-[#2E9BFA]">Auctions</span>
           </div>
-          <div className="flex flex-col items-center">
-            <div className="w-8 h-8 mb-1.5 flex items-center justify-center">
-              <span className="text-2xl text-gray-400">📊</span>
+          <div className="flex flex-col items-center group cursor-pointer">
+            <div className="w-8 h-8 mb-1.5 flex items-center justify-center transition-transform duration-300 group-hover:scale-110">
+              <span className="text-2xl text-gray-400 transition-colors duration-300 group-hover:text-[#2E9BFA]">📊</span>
             </div>
-            <span className="text-gray-400 text-sm">Activity</span>
+            <span className="text-gray-400 text-sm transition-colors duration-300 group-hover:text-[#2E9BFA]">Activity</span>
           </div>
         </div>
       </div>
