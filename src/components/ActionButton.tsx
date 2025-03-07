@@ -7,11 +7,11 @@ interface ActionButtonProps {
 
 export default function ActionButton({ icon, label }: ActionButtonProps) {
   return (
-    <div className="flex flex-col items-center gap-2">
-      <button className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center">
-        <span className="text-2xl">{icon}</span>
+    <div className="flex flex-col items-center gap-3">
+      <button className="w-[72px] h-[72px] bg-[#1E1E1E] hover:bg-[#252525] rounded-full flex items-center justify-center transition-colors">
+        <span className="text-3xl">{icon}</span>
       </button>
-      <span className="text-white text-sm">{label}</span>
+      <span className="text-white text-sm font-medium">{label}</span>
     </div>
   );
 } 
